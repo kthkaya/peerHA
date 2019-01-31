@@ -4,15 +4,15 @@ import vici
 
 class Swan:
     def __init__(self):
-        self.primary = { 'primary' : { 'version' : '1',  'local_addrs' : ['192.168.0.102'] , 'remote_addrs' : ['192.168.0.104'],
-                              'local' : { 'auth' : 'psk' , 'id' : '192.168.0.102'} ,
-                              'remote' : { 'auth' : 'psk' , 'id' : '192.168.0.104'}, 
+        self.primary = { 'primary' : { 'version' : '1',  'local_addrs' : ['192.168.0.104'] , 'remote_addrs' : ['192.168.0.105'],
+                              'local' : { 'auth' : 'psk' , 'id' : '192.168.0.104'} ,
+                              'remote' : { 'auth' : 'psk' , 'id' : '192.168.0.105'}, 
                               'children' : { 'primary' : {'mode' : 'tunnel', 'start_action' : 'start', 
                                                          'local_ts' : ['10.10.10.0/24'], 'remote_ts' : ['10.20.20.0/24']}}}}
     
-        self.bkp = { 'bkp' : { 'version' : '1',  'local_addrs' : ['192.168.0.102'] , 'remote_addrs' : ['192.168.0.105'],
-                              'local' : { 'auth' : 'psk' , 'id' : '192.168.0.102'} ,
-                              'remote' : { 'auth' : 'psk' , 'id' : '192.168.0.105'}, 
+        self.bkp = { 'bkp' : { 'version' : '1',  'local_addrs' : ['192.168.0.104'] , 'remote_addrs' : ['192.168.0.106'],
+                              'local' : { 'auth' : 'psk' , 'id' : '192.168.0.104'} ,
+                              'remote' : { 'auth' : 'psk' , 'id' : '192.168.0.106'}, 
                               'children' : { 'bkp' : {'mode' : 'tunnel', 'start_action' : 'start', 
                                                          'local_ts' : ['10.10.10.0/24'], 'remote_ts' : ['10.20.20.0/24']}}}}
     
