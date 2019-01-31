@@ -24,9 +24,7 @@ if __name__ == '__main__':
     backupActive = False
     
     while True:
-        response = ping(primaryPeer)
-        print (response)
-        
+        response = ping(primaryPeer)      
         if response<50:
             #print (hostname, 'is up!')
             if backupActive:
